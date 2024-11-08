@@ -12,7 +12,7 @@
       "npm": {
         "filePath": "dist/bundle.js",
         "packageName": "aptos-connect",
-        "registry": "_"
+        "registry": "https://registry.npmjs.org/"
       }
     }
   },
