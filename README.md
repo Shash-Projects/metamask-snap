@@ -10,8 +10,8 @@
 - *RPC Interaction:* Execute RPC requests to Aptos nodes for activities like checking account balances and transaction histories.
 
 #### Live Demo
-- [Example Website](https://aptos.netlify.app/)
-- [Demo Video](https://drive.google.com/file/d/1HXqmJOBAXdsBQmLdV5pwVaNNSaEJwGGx/view?usp=sharing)
+- [Example Website](https://wallet-aptos.netlify.app/)
+- [Demo Video](https://drive.google.com/file/d/1udzGcTMaYwhap0sOGQkJhpG82HjDEsUZ/view?usp=sharing)
 
 
 #### RPC Methods
