@@ -174,23 +174,23 @@ const Index = () => {
 
   const [accounts, setAccounts] = useState<AccountData[]>([
     {
-      name: 'Test Acc 0',
+      name: 'Account 0',
       derivationPath: [`0'`, `0'`]
     },
     {
-      name: 'Test Acc 1',
+      name: 'Account 1',
       derivationPath: [`1'`, `0'`]
     },
     {
-      name: 'Test Acc 2',
+      name: 'Account 2',
       derivationPath: [`2'`, `0'`]
     },
     {
-      name: 'Test Acc 3',
+      name: 'Account 3',
       derivationPath: [`3'`, `0'`]
     },
     {
-      name: 'Test Acc 4',
+      name: 'Account 4',
       derivationPath: [`4'`, `0'`]
     },
   ])
