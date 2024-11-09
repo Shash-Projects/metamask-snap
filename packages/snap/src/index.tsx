@@ -43,7 +43,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           type: 'alert',
           content: (
             <Box>
-              <Text>Account Address</Text>
+              <Text>Your Account Address</Text>
               <Copyable value={pubKey} />
             </Box>
           ),
@@ -62,7 +62,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           type: 'alert',
           content: (
             <Box>
-              <Text>Public Key</Text>
+              <Text>Your Public Key</Text>
               <Copyable value={pubKey} />
             </Box>
           ),
@@ -81,7 +81,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           type: 'alert',
           content: (
             <Box>
-              <Text>Private Key</Text>
+              <Text>Your Private Key (sensitive)</Text>
               <Copyable value={sk} sensitive />
             </Box>
           ),
@@ -129,9 +129,9 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           type: 'alert',
           content: (
             <Box>
-              <Text>Message</Text>
-              <Copyable value={message || 'Jai Siyaram!'} />
-              <Text>Signature</Text>
+              <Text>Message Content</Text>
+              <Copyable value={message || 'Message Signature'} />
+              <Text>Signature Generated</Text>
               <Copyable value={sig.toString()} />
             </Box>
           ),
@@ -169,8 +169,26 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           content: (
             <Box>
               <Heading>Transaction Details</Heading>
-              {/* // @TODO show txn details properly */}
-              <Text>{JSON.stringify(txnForDisplay, null, 2)}</Text>
+              <Text>
+                Sender: {txnForDisplay.sender}<br/>
+                Sequence Number: {txnForDisplay.sequence_number}<br/>
+                {/* <div>
+                  Module: {txnForDisplay.payload.entryFunction.module_name.name.identifier}
+                </div>
+                <div>
+                  Function: {txnForDisplay.payload.entryFunction.function_name.identifier}
+                </div>
+                <div>Transfer To: {txnForDisplay.payload.entryFunction.args[0]}</div>
+                <div>Amount: {txnForDisplay.payload.entryFunction.args[1].value}</div>
+                <div>Max Gas: {txnForDisplay.max_gas_amount}</div>
+                <div>Gas Price: {txnForDisplay.gas_unit_price}</div>
+                <div>
+                  Expiration: {
+                    new Date(parseInt(txnForDisplay.expiration_timestamp_secs) * 1000).toLocaleString()
+                  }
+                </div>
+                <div>Chain ID: {txnForDisplay.chain_id.chainId}</div> */}
+              </Text>
               <Copyable value={sig.toString()} />
             </Box>
           ),
@@ -403,11 +421,11 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
           type: 'alert',
           content: (
             <Box>
-              <Heading>Jai Siyaram!</Heading>
+              <Heading>Aptos Wallet</Heading>
               <Text>Aptos RPC Fetch</Text>
               <Copyable value={JSON.stringify(data, null, 2)}></Copyable>
               <Divider />
-              <Text>Systems Operational!</Text>
+              <Text>The wallet is working properly!!</Text>
             </Box>
           ),
         },

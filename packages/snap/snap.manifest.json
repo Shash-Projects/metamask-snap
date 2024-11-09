@@ -4,10 +4,10 @@
   "proposedName": "Wallet Aptos",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shash-Projects/metamask-snap"
+    "url": "https://github.com/vedant-asati/aptos-snap.git"
   },
   "source": {
-    "shasum": "DohvPXxm2seeyqO97+JhE2vJfs+QURKAkXTyC6ri96I=",
+    "shasum": "k72OdubT09tIKfT1d6Taf9hwfqCvA74uk7VjgywBKaY=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
