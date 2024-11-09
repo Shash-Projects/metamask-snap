@@ -18,9 +18,8 @@ const CardWrapper = styled.div<{
   display: flex;
   flex-direction: column;
   width: ${({ fullWidth }) => (fullWidth ? '100%' : '250px')};
-  background-color: ${({ theme }) => theme.colors.card?.default};
-  margin-top: 2.4rem;
-  margin-bottom: 2.4rem;
+  background-color: #168788;
+  margin:2.4rem;
   padding: 2.4rem;
   border: 1px solid ${({ theme }) => theme.colors.border?.default};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -47,8 +46,10 @@ const Description = styled.div`
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
   input{
-    padding: 5px 5px 5px 8px;
+    padding: 5px 5px 5px 10px;
     border-radius: 5px;
+    border:none;
+    margin-bottom: 5px;
   }
   input:focus{
   outline: none;

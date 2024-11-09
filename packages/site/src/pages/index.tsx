@@ -56,33 +56,23 @@ const Subtitle = styled.p`
 
 const CardContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 64.8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
   width: 100%;
-  height: 100%;
   margin-top: 1.5rem;
 `;
 
-const Notice = styled.div`
-  background-color: ${({ theme }) => theme.colors.background?.alternative};
-  border: 1px solid ${({ theme }) => theme.colors.border?.default};
-  color: ${({ theme }) => theme.colors.text?.alternative};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: 2.4rem;
-  margin-top: 2.4rem;
-  max-width: 60rem;
+const Container2 = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100%;
-
-  & > * {
-    margin: 0;
-  }
-  ${({ theme }) => theme.mediaQueries.small} {
-    margin-top: 1.2rem;
-    padding: 1.6rem;
-  }
+  margin: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
+
+const Container1 = styled.div``;
 
 const ErrorMessage = styled.div`
   background-color: ${({ theme }) => theme.colors.error?.muted};
@@ -90,8 +80,7 @@ const ErrorMessage = styled.div`
   color: ${({ theme }) => theme.colors.error?.alternative};
   border-radius: ${({ theme }) => theme.radii.default};
   padding: 2.4rem;
-  margin-bottom: 2.4rem;
-  margin-top: 2.4rem;
+  margin: 2.4rem auto 2.4rem auto;
   max-width: 60rem;
   width: 100%;
   ${({ theme }) => theme.mediaQueries.small} {
@@ -327,7 +316,7 @@ const Index = () => {
       method: 'signAllTransactions',
       params: {
         derivationPath: activeAccount?.derivationPath,
-        messages: ['Jai Siyaram!', '0xab7896'],
+        messages: ['Allah Hu Akbar!', '0xab7896'],
       },
     });
     console.log(res);
@@ -337,7 +326,7 @@ const Index = () => {
       method: 'signMessage',
       params: {
         derivationPath: activeAccount?.derivationPath,
-        message: messageText || 'Jai Siyaram!',
+        message: messageText || 'Hihaha Apka Bhelcome hai!',
       },
     });
     console.log(res);
@@ -410,8 +399,9 @@ const Index = () => {
         Get started by interacting with the snap functionalities below.
       </Subtitle>
       <br />
-      <AccountDropdown setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} accounts={accounts} setActiveAccount={setActiveAccount} />
+      <AccountDropdown setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} accounts={accounts} setActiveAccount={setActiveAccount} /><br/>
       <CardContainer>
+        <Container1>
         {error && (
           <ErrorMessage>
             <b>An error happened:</b> {error.message}
@@ -460,6 +450,8 @@ const Index = () => {
             disabled={!installedSnap}
           />
         )}
+        </Container1>
+        <Container2>
         <Card
           content={{
             title: 'Send JSR message',
@@ -572,6 +564,7 @@ const Index = () => {
           }}
           disabled={!installedSnap}
         />
+        </Container2>
       </CardContainer>
     </Container>
   );

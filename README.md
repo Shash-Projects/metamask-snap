@@ -11,7 +11,7 @@
 
 #### Live Demo
 - [Example Website](https://aptos.netlify.app/)
-- [Demo Video](https://youtu.be/f2-FAUYnf-g)
+- [Demo Video](https://drive.google.com/file/d/1HXqmJOBAXdsBQmLdV5pwVaNNSaEJwGGx/view?usp=sharing)
 
 
 #### RPC Methods
