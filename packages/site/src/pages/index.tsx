@@ -174,23 +174,23 @@ const Index = () => {
 
   const [accounts, setAccounts] = useState<AccountData[]>([
     {
-      name: 'Account 0',
+      name: 'Test Acc 0',
       derivationPath: [`0'`, `0'`]
     },
     {
-      name: 'Account 1',
+      name: 'Test Acc 1',
       derivationPath: [`1'`, `0'`]
     },
     {
-      name: 'Account 2',
+      name: 'Test Acc 2',
       derivationPath: [`2'`, `0'`]
     },
     {
-      name: 'Account 3',
+      name: 'Test Acc 3',
       derivationPath: [`3'`, `0'`]
     },
     {
-      name: 'Account 4',
+      name: 'Test Acc 4',
       derivationPath: [`4'`, `0'`]
     },
   ])
@@ -404,11 +404,10 @@ const Index = () => {
   return (
     <Container>
       <Heading>
-        Welcome to <Span>Aptos-snap Interface</Span>
+        Welcome to <Span>Aptos-Snap Interface</Span>
       </Heading>
       <Subtitle>
-        Get started by interacting with the buttons below.
-        {/* <button type="button" onClick={() => setToggleFetch(!toggleFetch)}>toggleFetch</button> */}
+        Get started by interacting with the snap functionalities below.
       </Subtitle>
       <br />
       <AccountDropdown setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} accounts={accounts} setActiveAccount={setActiveAccount} />
@@ -486,7 +485,7 @@ const Index = () => {
             description:
               <>
                 <label htmlFor="messageText">Message: </label>
-                <input type="text" name="messageText" id="messageText" placeholder='type your message...' value={messageText} onChange={handleChange} /> <br />
+                <input type="text" name="messageText" id="messageText" placeholder='Type the message...' value={messageText} onChange={handleChange} /> <br />
               </>,
             button: (
               <SendHelloButton
@@ -573,15 +572,6 @@ const Index = () => {
           }}
           disabled={!installedSnap}
         />
-
-        <Notice>
-          <p>
-            Please note that the <b>snap.manifest.json</b> and{' '}
-            <b>package.json</b> must be located in the server root directory and
-            the bundle must be hosted at the location specified by the location
-            field.
-          </p>
-        </Notice>
       </CardContainer>
     </Container>
   );
